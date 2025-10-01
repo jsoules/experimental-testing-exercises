@@ -1,9 +1,3 @@
-//
-//
-// https://godbolt.org/z/f5jhEKPE6
-//
-//
-
 #include <gtest/gtest.h>
 #include <cmath>
 
@@ -13,6 +7,8 @@ TEST(midpoint, massive) {
     auto mid = midpoint(std::pow(2, 31) - 4, std::pow(2, 31) - 2);
     EXPECT_EQ(mid, std::pow(2, 31) - 3);
 }
+
+
 
 
 

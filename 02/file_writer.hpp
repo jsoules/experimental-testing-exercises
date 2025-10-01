@@ -1,3 +1,18 @@
+/*
+
+CE LINK: https://godbolt.org/z/eGbPcfd15
+
+TODO: Identify and test some of the properties of the DataProcessor class
+
+ Suggestion:
+  - Start with compute_value_2. Confirm that the 'draws' parameter
+    actually controls the number of results
+
+ Make sure that your tests leave your file system clean, and that tests
+ run correctly regardless of the order in which they are called!
+
+*/
+
 #pragma once
 #include <fstream>
 #include <optional>

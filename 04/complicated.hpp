@@ -1,3 +1,17 @@
+/*
+
+CE LINK: https://godbolt.org/z/s1nT56aev
+
+This is an artificially hard example, not least because it lacks
+the context of a real task or any code that calls it.
+
+TODO: How would you approach testing this code?
+ - Would you test it as-is?
+ - Do you understand what it's supposed to be doing?
+ - How would you discover the expected properties and invariants
+   of the system?
+*/
+
 #pragma once
 #include <algorithm>
 #include <cmath>
