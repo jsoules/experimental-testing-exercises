@@ -17,6 +17,7 @@ def test_midpoint_same():
     assert binary_search.midpoint(0, 0) == 0
     assert binary_search.midpoint(5, 5) == 5
 
+
 def test_midpoint_massive():
     assert binary_search.midpoint(2**31 - 4, 2**31 - 2) == 2**31 - 3
 
