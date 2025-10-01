@@ -1,6 +1,16 @@
 import random
 from pathlib import Path
 
+### TODO: Identify and test some of the properties of the DataProcessor class
+#
+# Suggestion:
+#  - Start with compute_value_2. Confirm that the 'draws' parameter
+#    actually controls the number of results
+#
+# Make sure that your tests leave your file system clean, and that tests
+# run correctly regardless of the order in which they are called!
+
+
 class FileInteractionManager():
     def __init__(self, root_dir="output"):
         self.root_dir = Path(root_dir)
@@ -22,7 +32,6 @@ class FileInteractionManager():
 
 
 class DataProcessor():
-
     def __init__(self):
         self.options = ["option 1", "option 2", "option 3", "option 4"]
         self.result_1 = None
@@ -39,7 +48,9 @@ class DataProcessor():
 
 
     def compute_value_3(self, n=3, p=0.5):
-        self.result_3 = random.binomialvariate(n, p)
+        # This is a binomial distribution;
+        # In python 3.12+ can just call random.binomialvariate()
+        self.result_3 = sum(random.random() < p for i in range(n))
 
 
     def write_files(self, file_mgr):

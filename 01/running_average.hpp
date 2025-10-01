@@ -6,9 +6,8 @@ class RunningAverage {
 public:
   RunningAverage() : average(0.0), item_count(0) {}
 
-  void report_average() {
-    std::cout << "Average: " << average << " over " << item_count << " items"
-              << std::endl;
+  double current_average() {
+    return average;
   }
 
   void add_item(double item) {
