@@ -1,6 +1,6 @@
 /*
 
-CE LINK: https://godbolt.org/z/eGbPcfd15
+CE LINK: https://godbolt.org/z/eheYq5T4r
 
 TODO: Identify and test some of the properties of the DataProcessor class
 
@@ -73,7 +73,7 @@ public:
   }
 
   void compute_value_2(int draws = 3) {
-    std::uniform_int_distribution<int> dist(1, options.size());
+    std::uniform_int_distribution<int> dist(0, options.size() - 1);
     auto res = std::vector<std::string>(draws);
     for (int i = 0; i < draws; ++i) {
       auto idx = dist(global_random);
@@ -87,7 +87,7 @@ public:
     result_3 = dist(global_random);
   }
 
-  void write_files(FileInteractionManager &file_mgr) {
+  template <typename FIM> void write_files(FIM &file_mgr) {
     if (result_1) {
       file_mgr.save_1(*result_1);
     }
