@@ -1,6 +1,6 @@
 /*
 
-CE LINK: https://godbolt.org/z/463ad9PT5
+CE LINK: https://godbolt.org/z/Yh94h7qo4
 
 */
 #include <algorithm>
@@ -13,7 +13,6 @@ CE LINK: https://godbolt.org/z/463ad9PT5
 #include <vector>
 
 std::string read_text(const std::string &data_file) {
-  std::vector<std::string> result;
   std::ifstream ifs(data_file);
   std::stringstream stream;
   stream << ifs.rdbuf();
